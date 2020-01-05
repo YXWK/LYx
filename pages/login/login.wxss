@@ -1,0 +1,82 @@
+/* pages/login/login.wxss */
+.bg{
+  height: 100vh;
+  width: 100vw;
+}
+.sculpture-bg1{
+  position: absolute;
+  top: 75rpx;
+  left: 255rpx;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 50%;
+  background: rgba(225,225,225,.2);
+}
+.sculpture-bg2{
+  width: 200rpx;
+  height: 200rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top:-100rpx;
+  margin-left:-100rpx;
+  border-radius: 50%;
+  background: rgba(225,225,225,.5);
+}
+.sculpture-bg1 image{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top:-75rpx;
+  margin-left:-75rpx;
+
+}
+.login_box{
+  position: absolute;
+  top: 400rpx;
+  left: 10%;
+  color:#fff;
+  width: 80%;
+  overflow: hidden;
+  /* background: pink; */
+}
+.username_box,.userpass_box{
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 30rpx;
+  border-bottom: 1rpx solid #fff;
+  font-size: 30rpx;
+}
+mp-icon,input{
+  float: left;
+}
+input{
+  margin-left: 20rpx;
+}
+mp-icon{
+  margin-top: -10rpx;
+}
+checkbox-group{
+  margin-top: 10rpx;
+}
+.checkbox{
+  font-size: 20rpx;
+  /* background-color: pink; */
+}
+.rm{
+  transform: scale(0.5,0.5);
+}
+.submit{
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border: 1rpx solid #A7D5E1;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  background: #6EB5D1;
+}

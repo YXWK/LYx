@@ -1,0 +1,44 @@
+<!--pages/product/product.wxml-->
+<view class="product">
+  <view class="weather">
+		<image class="bg" src="../../static/top-bg.jpg" mode=""></image>
+	</view>
+  <view class="product-gl">
+    <view class="base-mgt">基地管理</view>
+    <navigator url="../workbench/workbench" class="product-box">
+      <image src="../../static/yyzj.png"mode=""></image>
+      <view class="base-name">我的工作台</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+    <navigator url="../personmgt/personmgt" class="product-box">
+      <image src="../../static/glry.png"mode=""></image>
+      <view class="base-name">人员管理</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+    <navigator url="../plantmgt/plantmgt" class="product-box">
+      <image src="../../static/glzh.png"mode=""></image>
+      <view class="base-name" color="#ccc">种植管理</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+    <navigator url="../work/work" class="product-box">
+      <image src="../../static/glrz.png"mode=""></image>
+      <view class="base-name">农事作业</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+    <navigator url="../harvest/harvest" class="product-box">
+      <image src="../../static/glrk.png"mode=""></image>
+      <view class="base-name">采收入库</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+    <navigator url="../basemsg/basemsg" class="product-box">
+      <image src="../../static/glnj.png"mode=""></image>
+      <view class="base-name">基地管理</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+    <navigator url="../workbench02/workbench02" class="product-box">
+      <image src="../../static/glwl.png"mode=""></image>
+      <view class="base-name">物料管理</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+		</view>
+</view>

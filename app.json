@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/contral/contral",
+    "pages/shopping/shopping",
+    "pages/product/product",
+    "pages/user/user",
+    "pages/led/led",
+    "pages/fertilizer/fertilizer",
+    "pages/insecticidal/insecticidal",
+    "pages/ftllog/ftllog",
+    "pages/personmgt/personmgt",
+    "pages/plantmgt/plantmgt",
+    "pages/harvest/harvest",
+    "pages/basemsg/basemsg",
+    "pages/work/work",
+    "pages/jobdetails/jobdetails",
+    "pages/workbench/workbench",
+    "pages/login/login",
+    "pages/changepass/changepass",
+    "pages/workbench02/workbench02"
+  ],
+  "tabBar": {
+    "backgroundColor": "#4E91C6",
+    "color": "#fff",
+    "selectedColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/home.png",
+        "selectedIconPath": "static/home-active.png"
+      },
+      {
+        "pagePath": "pages/contral/contral",
+        "text": "远程控制",
+        "iconPath": "static/contral.png",
+        "selectedIconPath": "static/contral-active.png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "商城",
+        "iconPath": "static/shopping.png",
+        "selectedIconPath": "static/shopping-active.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "生产管理",
+        "iconPath": "static/product.png",
+        "selectedIconPath": "static/product-active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "用户中心",
+        "iconPath": "static/user.png",
+        "selectedIconPath": "static/user-active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#4E96C6",
+    "navigationBarTitleText": ""
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

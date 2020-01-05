@@ -1,0 +1,30 @@
+<!--pages/changepass/changepass.wxml-->
+<view class="changepass">
+  <view class="contraltopimg">
+    <view class="weather">
+      <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
+    </view>
+    <view class="account">略阳县电子商务信息管理平台</view>
+    <view class="sculpture-bg1">
+      <view class="sculpture-bg2">
+        <image src="../../static/sculpture.jpg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="changepass_box">
+     <view class="section">
+      <text>旧密码</text>
+      <input class="oldpass" name="input" placeholder="请输入旧密码"/>
+    </view>
+    <view class="section">
+      <text>新密码</text>
+      <input class="newpass" name="input" placeholder="请输入新密码"/>
+    </view>
+    <view class="section">
+      <text>请确认密码</text>
+      <input class="newpass2" name="input" placeholder="请重新输入新密码"/>
+    </view>
+    <view class="change">确认更改</view>
+  </view>
+  <tab/>
+</view>

@@ -1,0 +1,80 @@
+<!--pages/harvest/harvest.wxml-->
+<view class="harvest">
+   <view>
+    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
+	</view>
+  <view class="ftl_contral">
+    <view class="ftlcon_title">采收入库</view>
+    <view class="ftlcon_box">
+      <view class="ftlcon_con" wx:for="{{harvest}}" wx:key="item">
+        <view class="name">{{item.name}}</view>
+        <view class="perifm">
+          <image src="../../static/{{item.img}}"></image>
+          <view class="per_con">
+            <view class="per">采收批次：<text>{{item.batch}}</text></view>
+            <view class="per">所属基地：<text>{{item.base}}</text></view>
+            <view class="per">采收数量：<text>{{item.num}}</text>kg</view>
+            <view class="per">负责人：<text>{{item.head}}</text></view>
+            <view class="per">采收时间：<text>{{item.data}}</text></view>
+            <view class="per">批次库存：<text>{{item.ivtbatch}}</text>kg</view>
+          </view>
+        </view>
+        <view class="delete">删除</view>
+        <view class="code" catchtap="addshow">赋码出场</view>
+      </view>
+    </view>
+  </view>
+  <view class="addimg_box" wx:if="{{showModal}}">
+    <text class="addtitle">赋码出场</text>
+    <view class='close_mask' bindtap="close_mask">X</view>
+    <view class="workimg">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="section">
+          <view class="section__title"><text class="redstasr">*</text> 采收批次</view>
+          <!-- <input name="input" placeholder="选择出库批次" /> -->
+          <view class='list-msg2 isinput' bindtap='batchShow'>
+            <text>{{tihuoWay}}</text>
+          </view>
+        </view>
+        <view class="select_box" wx:if="{{selectbatch}}">
+          <view class="select_one" bindtap="banchSelect" data-name="1111">1111</view>
+          <view class="select_one" bindtap="banchSelect" data-name="2222">2222</view>
+          <view class="select_one" bindtap="banchSelect" data-name="33332">3333</view>
+        </view>
+        <view class="section">
+          <view class="section__title"><text class="stasr">*</text> 产品名称</view>
+          <input class="isdisable" name="input" placeholder="小峪村苹果" disabled/>
+        </view>
+        <view class="section">
+          <view class="section__title"><text class="redstasr">*</text> 出库时间</view>
+          <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+            <view class="picker isinput">
+              {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="section">
+          <view class="section__title"><text class="stasr">*</text> 出库人员</view>
+           <view class='list-msg2 isinput' bindtap='personShow'>
+            <text>{{person}}</text>
+          </view>
+        </view>
+        <view class="select_box person" wx:if="{{selectperson}}">
+          <view class="select_one" bindtap="personSelect" data-name="张三">张三</view>
+          <view class="select_one" bindtap="personSelect" data-name="李四">李四</view>
+          <view class="select_one" bindtap="personSelect" data-name="王五">王五</view>
+        </view>
+        <view class="section">
+          <view class="section__title"><text class="redstasr">*</text> 出库数量</view>
+          <view class="calculate"><text catchtap="minus">-</text><text class="num" data-text="{{number}}">{{number}}</text><text catchtap="add">+</text> kg</view>
+        </view>
+        <view class="btn-area">
+          <view class="submit">确认</view>
+          <view class="reset"  bindtap="close_mask">取消</view>
+        </view>
+      </form>
+    </view>
+  </view>
+  <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <tab/>
+</view>

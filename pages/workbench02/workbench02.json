@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-icon": "../../components/icon/icon",
+    "tab": "../../custom-tab-bar/tab"
+  }
+}

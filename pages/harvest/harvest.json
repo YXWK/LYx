@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "采收入库",
+  "usingComponents": {
+    "tab": "../../custom-tab-bar/tab"
+  }
+}

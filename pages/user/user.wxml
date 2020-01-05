@@ -1,0 +1,75 @@
+<!--pages/user/user.wxml-->
+<view class="content">
+  <view class="contraltopimg">
+    <view class="weather">
+      <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
+    </view>
+    <view class="account">略阳县电子商务信息管理平台</view>
+    <view class="sculpture-bg1">
+      <view class="sculpture-bg2">
+        <image src="../../static/sculpture.jpg"></image> 
+        </view>
+    </view>
+    <navigator url="../login/login" class="edit">
+      登录
+      <!-- <image src="../../static/edit.png"></image> -->
+    </navigator>
+  </view>
+  <view class="apply">
+    <view class="tittle">应用中心</view>
+    <view class="apply-con">
+      <view class="apply-box">
+        <image src="../../static/yysh.png" mode=""></image>
+        <view>生产手册</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/yyzx.png" mode=""></image>
+        <view>农业咨询</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/yydt.png" mode=""></image>
+        <view>市场动态</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/yyzj.png" mode=""></image>
+        <view>专家指导</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/yysb.png" mode=""></image>
+        <view>智能识别</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/yyfy.png" mode=""></image>
+        <view>病情防御</view>
+      </view>
+    </view>
+  </view>
+  <view class="apply">
+    <view class="tittle">产品管理</view>
+    <view class="apply-con">
+      <view class="apply-box">
+        <image src="../../static/glnc.png" mode=""></image>
+        <view>我的农场</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/glcp.png" mode=""></image>
+        <view>我的产品</view>
+      </view>
+      <view class="apply-box">
+        <image src="../../static/gldd.png" mode=""></image>
+        <view>我的订单</view>
+      </view>
+    </view>
+  </view>
+  <view class="user">
+    <navigator url="../changepass/changepass" class="user-box">
+      <view class="user-name" color="#ccc">修改密码</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </navigator>
+     <view class="user-box">
+      <view class="user-name" color="#ccc">注销</view>
+      <mp-icon icon="arrow" color="#ccc" size="{{15}}"></mp-icon>
+    </view>
+	</view>
+  <!-- <navigator url="../../custom-tab-bar/tab">tabbar</navigator> -->
+</view>

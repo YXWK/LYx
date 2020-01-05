@@ -1,0 +1,26 @@
+<!--pages/plantmgt/plantmgt.wxml-->
+<view class="plantmgt">
+   <view>
+    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
+	</view>
+  <view class="ftl_contral">
+    <view class="ftlcon_title">种植管理</view>
+    <view class="ftlcon_box">
+      <view class="ftlcon_con" wx:for="{{plant}}" wx:key="item">
+      <view class="name">{{item.name}}</view>
+        <view class="perifm">
+          <image src="../../static/{{item.img}}"></image>
+          <view class="per_con">
+            <view class="per">当前阶段：<text>{{item.now}}</text></view>
+            <view class="per">所属基地：<text>{{item.base}}</text></view>
+            <view class="per">品种：<text>{{item.varieties}}</text></view>
+            <view class="per">开始时间：<text>{{item.start}}</text></view>
+            <view class="per">生长天数：<text>{{item.day}}</text></view>
+            <view class="per">规模：<text>{{item.scale}}</text></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <tab/>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "种植管理",
+  "usingComponents": {
+    "tab": "../../custom-tab-bar/tab"
+  }
+}

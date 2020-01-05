@@ -1,0 +1,274 @@
+/* pages/workbench/workbench.wxss */
+.workbench{
+  background: #F5F5F5;
+  overflow: hidden;
+  position: relative;
+}
+.bg{
+ height: 100vh;
+  width: 100vw;
+  display: block;
+}
+.ceshi_swiper {
+  width: 550rpx;
+  margin: 10rpx auto;
+  position: absolute;
+  top: 20rpx;
+  left: 100rpx;
+  height: 900rpx;
+  /* overflow: hidden; */
+}
+.read_swiper{
+  width: 100%;
+  height: 100%;
+}
+/* .ceshi_prew text {
+  color: #fff;
+  font-size: 30rpx;
+  float: left;
+  margin-top: 15rpx;
+  height: 100%;
+} */
+
+/* .ceshi_next text {
+  color: #fff;
+  font-size: 30rpx;
+  display: block;
+  float: right;
+  margin-top: 15rpx;
+  height: 100%;
+} */
+.type_name{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+  margin-top: 80rpx;
+  position: absolute;
+}
+/* 箭头 */
+.ceshi_next {
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.ceshi_prew {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+}
+.bench{
+  width: 100%;
+  height: 750rpx;
+  position: absolute;
+  top: 150rpx;
+  left: 0;
+  padding: 25rpx;
+  padding-bottom: 0;
+  /* background: pink; */
+  box-sizing: border-box;
+}
+.bench text{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 35rpx;
+  color: #484E75;
+}
+.bench text:first-child{
+  font-size: 35rpx;
+  color: #1D3371;
+  line-height: 60rpx;
+}
+.bench_btn{
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #409EFE;
+  color: #fff;
+  border-radius: 5rpx;
+  text-align: center;
+}
+
+
+
+.onebtn,
+.twobtn,
+.threebtn,
+.fourbtn,
+.fivebtn,
+.sixbtn,
+.sevenbtn,
+.eightbtn,
+.ninebtn,
+.tenbtn {
+  position: absolute;
+  width: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #409EFE;
+  color: #fff;
+  border-radius: 5rpx;
+  text-align: center;
+}
+
+.onebtn {
+  right: calc(63% + 1px);
+  bottom: 135px;
+}
+
+.twobtn {
+  right: calc(63% + 1px);
+  bottom: 85px;
+}
+
+.threebtn {
+  right: calc(63% + 1px);
+  bottom: 35px;
+}
+
+.fourbtn {
+  left: calc(63% + 1px);
+  bottom: 165px;
+}
+
+.fivebtn {
+  left: calc(63% + 1px);
+  bottom: 115px;
+}
+
+.sixbtn {
+  left: calc(63% + 1px);
+  bottom: 65px;
+}
+
+.sevenbtn {
+  left: calc(63% + 1px);
+  bottom: 15px;
+}
+/* 补充：第八个按钮（左边，自下向上第四个按钮） */
+
+.eightbtn {
+  right: calc(63% + 1px);
+  bottom: 185px;
+}
+/* 补充：第九个按钮（右边，自下向上第五个按钮） */
+
+.ninebtn {
+  left: calc(63% + 1px);
+  bottom: 215px;
+}
+/* 补充：第十个按钮（左边，自下向上第五个按钮） */
+
+.tenbtn {
+  right: calc(63% + 1px);
+  bottom: 235px;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.ten {
+  position: absolute;
+  width: calc(27% - 38px);
+  bottom: 0;
+  border: 1px solid #77b5de;
+}
+/* 第一个按钮（左边自下向上第3条线） */
+
+.one {
+  height: 150px;
+  width: calc(27% - 36px);
+  right: calc(50% + 1px);
+  border-radius: 0px 15px 0px 0px;
+  border-width: 1px 1px 0 0;
+}
+/* 第二个按钮（左边自下向上第2条线） */
+
+.two {
+  height: 100px;
+  right: calc(50% + 4px);
+  border-radius: 0px 15px 0px 0px;
+  border-width: 1px 1px 0 0;
+}
+/* 第三个按钮（左边自下向上第1条线） */
+
+.three {
+  height: 50px;
+  right: calc(50% + 4px);
+  border-radius: 0px 15px 0px 0px;
+  border-width: 1px 1px 0 0;
+}
+/* 第四个按钮（右边自下向上第4条线） */
+
+.four {
+  height: 180px;
+  width: calc(27% - 36px);
+  left: calc(50% + 1px);
+  border-radius: 15px 0px 0px 0px;
+  border-width: 1px 0 0 1px;
+}
+/* 第五个按钮（右边自下向上第3条线） */
+
+.five {
+  height: 130px;
+  left: calc(50% + 4px);
+  border-radius: 15px 0px 0px 0px;
+  border-width: 1px 0 0 1px;
+}
+/* 第六个按钮（右边自下向上第2条线） */
+
+.six {
+  height: 80px;
+  left: calc(50% + 4px);
+  border-radius: 15px 0px 0px 0px;
+  border-width: 1px 0 0 1px;
+}
+/* 第七个按钮（右边自下向上第1条线） */
+
+.seven {
+  height: 30px;
+  left: calc(50% + 4px);
+  border-radius: 15px 0px 0px 0px;
+  border-width: 1px 0 0 1px;
+}
+/* 补充第八个按钮（左边自下向上第4条线） */
+
+.eight {
+  height: 200px;
+  width: calc(27% - 36px);
+  right: calc(50% + 1px);
+  border-radius: 0px 15px 0px 0px;
+  border-width: 1px 1px 0 0;
+}
+/* 补充第九个按钮（右边自下向上第5条线） */
+
+.nine {
+  height: 230px;
+  width: calc(27% - 36px);
+  left: calc(50% + 1px);
+  border-radius: 15px 0px 0px 0px;
+  border-width: 1px 0 0 1px;
+}
+/* 补充第十个按钮（左边自下向上第5条线） */
+
+.ten {
+  height: 250px;
+  width: calc(27% - 36px);
+  right: calc(50% + 1px);
+  border-radius: 0px 15px 0px 0px;
+  border-width: 1px 1px 0 0;
+}

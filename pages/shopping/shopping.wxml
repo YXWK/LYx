@@ -1,0 +1,6 @@
+<!--pages/shopping/shopping.wxml-->
+<text>
+  <view>
+        <web-view :webview-styles="webviewStyles" src="http://www.10ymg.cn/"></web-view>
+    </view>
+</text>

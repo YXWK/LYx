@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "基地管理",
+  "usingComponents": {
+    "tab": "../../custom-tab-bar/tab"
+  }
+}

@@ -1,0 +1,41 @@
+<!-- contral.wxml -->
+<view class="contral">
+ <view class="weather">
+		<image class="bg" src="../../static/top-bg.jpg" mode=""></image>
+	</view>
+  <view class="contral-gl">
+    <navigator url="../led/led" class="contral-box">
+      <image src="../../static/kzsf.png" mode=""></image>
+      LED控制
+    </navigator>
+    <view class="contral-box">
+      <image src="../../static/kzdcf.png" mode=""></image>
+      电磁阀控制
+    </view>
+    <navigator url="../insecticidal/insecticidal" class="contral-box">
+      <image src="../../static/kzscd.png" mode=""></image>
+      杀虫灯控制
+    </navigator>
+    <navigator url="../led/led" class="contral-box">
+      <image src="../../static/kzbgd.png" mode=""></image>
+      补光灯控制
+    </navigator>
+    <view class="contral-box">
+      <image src="../../static/kzfj.png" mode=""></image>
+      风机控制
+    </view>
+    <view class="contral-box">
+      <image src="../../static/kzsl.png" mode=""></image>
+      水帘控制
+    </view>
+    <view class="contral-box">
+      <image src="../../static/kzjlj.png" mode=""></image>
+      卷帘机控制
+    </view>
+    <navigator url="../fertilizer/fertilizer" class="contral-box">
+      <image src="../../static/kzsf.png" mode=""></image>
+      水肥控制
+    </navigator>
+		<view class="clear"></view>
+		</view>
+</view>

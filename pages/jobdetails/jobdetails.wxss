@@ -1,0 +1,135 @@
+/* pages/jobdetails/jobdetails.wxss */
+@import "../../components/public/public.wxss";
+.jobdetails{
+  background: #F5F5F5;
+  overflow: hidden;
+  height: 100%;
+}
+.ftl_contral{
+  font-size: 26rpx;
+}
+.ftlcon_title{
+  background: #fff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.title_name{
+  float: left;
+  color: #2a3471;
+  font-size: 36rpx;
+  padding-left: 10rpx;
+}
+.addimg{
+  height: 40rpx;
+  line-height: 40rpx;
+  float: right;
+  color: #fff;
+  margin-top: 20rpx;
+  background: #e6a23d;
+  font-size: 20rpx;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  border: 1px solid #e2992a;
+}
+.ftlcon_box{
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 10rpx;
+  padding-top: 20rpx;
+}
+.ftlcon_con{
+  width: 90%;
+  margin: 0 auto;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #343434;
+  font-size: 24rpx;
+}
+.imgtitle{
+  width: 90%;
+  margin: 20rpx auto 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.ftlcon_box image{
+  width: 95%;
+  height: 350rpx;
+  display: block;
+  margin: 0 auto;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 5;
+  opacity: 0.7;
+}
+.addtitle{
+  float: left;
+  margin-bottom: 20rpx;
+}
+.addimg_box {
+  width: 580rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 10;
+  margin: -370rpx 85rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.close_mask {
+  color: #cbcbcb;
+  position: absolute;
+  right: 25rpx;
+  /* top: -82%; */
+  font-size: 32rpx;
+}
+.workimg{
+  width: 100%;
+  overflow: hidden;
+  /* display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; */
+}
+.workimgbox{
+  position: relative;
+  float: left;
+  margin: 10rpx;
+}
+.workimgbox image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.max-window,.delete{
+  position: absolute;
+  top: 60rpx;
+  left: 40rpx;
+  z-index: 50;
+  display: block;
+}
+.delete{
+  left: 80rpx;
+}
+.add{
+  float: left;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  border: 1rpx dashed #3396fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}

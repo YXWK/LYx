@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "人员管理",
+  "usingComponents": {
+    "tab":"../../custom-tab-bar/tab"
+  }
+}

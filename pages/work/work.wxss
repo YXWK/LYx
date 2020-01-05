@@ -1,0 +1,35 @@
+/* pages/work/work.wxss */
+@import "../../components/public/public.wxss";
+.work{
+  background: #F5F5F5;
+  overflow: hidden;
+}
+.ftl_contral{
+  font-size: 26rpx;
+}
+.ftlcon_title{
+  background: #fff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 50rpx;
+  color: #2a3471;
+  font-size: 36rpx;
+}
+.ftlcon_box{
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+.ftlcon_con{
+  width: 90%;
+  margin: 0 auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ccc;
+  color: #343434;
+  font-size: 24rpx;
+}

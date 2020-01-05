@@ -1,0 +1,105 @@
+/* pages/user/user.wxss */
+.content{
+  width: 100%;
+  background: #F5F5F5;
+}
+.contraltopimg{
+  width: 100%;
+  /* height: 500rpx; */
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  background: #fff;
+}
+.bg{
+  width: 100%;
+  height: 300rpx;
+}
+.account{
+  position: absolute;
+  top: 10rpx;
+  left: 150rpx;
+  font-size: 40rpx;
+}
+.sculpture-bg1{
+  position: absolute;
+  top: 75rpx;
+  left: 285rpx;
+  width: 210rpx;
+  height: 210rpx;
+  border-radius: 50%;
+  background: rgba(225,225,225,.2);
+}
+.sculpture-bg2{
+  width: 180rpx;
+  height: 180rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top:-90rpx;
+  margin-left:-90rpx;
+  border-radius: 50%;
+  background: rgba(225,225,225,.5);
+}
+.sculpture-bg1 image{
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-top:-75rpx;
+  margin-left:-75rpx;
+
+}
+.edit{
+  position: absolute;
+  bottom: 15rpx;
+  right: 20rpx;
+  font-size: 25rpx;
+}
+.edit image{
+  width: 25rpx;
+  height: 25rpx;
+}
+.apply{
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.tittle{
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  border-bottom: 3rpx solid #ddd;
+}
+.apply-con{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.apply-box{
+ width: 30%;
+ height: 100rpx;
+ text-align: center;
+ padding: 50rpx 0;
+}
+.apply image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.user{
+  background: #fff;
+}
+.user-box{
+  width: 90%;
+  height: 80rpx;
+  margin: 0 auto;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #ddd;
+}

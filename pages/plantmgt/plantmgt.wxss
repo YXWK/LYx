@@ -1,0 +1,46 @@
+/* pages/plantmgt/plantmgt.wxss */
+@import "../../components/public/public.wxss";
+.plantmgt{
+  background: #F5F5F5;
+  overflow: hidden;
+}
+.ftl_contral{
+  font-size: 26rpx;
+}
+.ftlcon_title{
+  background: #fff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 50rpx;
+  color: #2a3471;
+  font-size: 36rpx;
+}
+.ftlcon_box{
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+.ftlcon_con{
+  width: 90%;
+  overflow: hidden;
+  margin: 20rpx auto 0;
+  border: 1px solid #6fbecb;
+  padding: 30rpx;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.ftlcon_con image{
+  width: 160rpx;
+  height: 160rpx;
+  float: left;
+  margin-top: 40rpx;
+}
+.per_con{
+  float: left;
+  margin-left: 50rpx;
+}
+.per{
+  line-height: 45rpx;
+}

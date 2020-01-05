@@ -12,19 +12,21 @@
     </view>
   </view>
   <view class="changepass_box">
-     <view class="section">
-      <text>旧密码</text>
-      <input class="oldpass" name="input" placeholder="请输入旧密码"/>
-    </view>
-    <view class="section">
-      <text>新密码</text>
-      <input class="newpass" name="input" placeholder="请输入新密码"/>
-    </view>
-    <view class="section">
-      <text>请确认密码</text>
-      <input class="newpass2" name="input" placeholder="请重新输入新密码"/>
-    </view>
-    <view class="change">确认更改</view>
+    <form >
+      <view class="section">
+        <text>旧密码</text>
+        <input class="oldpass" type="password" name="oldpass" value="{{oldpass}}" bindinput="oldinput" placeholder="请输入旧密码" />
+      </view>
+      <view class="section">
+        <text>新密码</text>
+        <input class="newpass" type="password" name="newpass" value="{{newpass}}" bindinput="newinput" placeholder="请输入新密码" />
+      </view>
+      <view class="section">
+        <text>请确认密码</text>
+        <input class="newpass2" type="password" name="newpass2" value="{{newpass2}}" bindinput="newinput2"   placeholder="请重新输入新密码" />
+      </view>
+      <view class="change" catchtap="formSubmit">确认更改</view>
+    </form>
   </view>
   <tab/>
 </view>

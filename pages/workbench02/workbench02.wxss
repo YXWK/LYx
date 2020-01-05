@@ -53,8 +53,8 @@
   text-align: center;
   color: #fff;
   font-size: 30rpx;
-  /* margin-top: 20rpx; */
-  margin: 20rpx 10rpx;
+  margin-top: 20rpx;
+  /* margin: 20rpx 10rpx; */
   background: orange;
 }
 .slide-image{

@@ -72,7 +72,7 @@ Page({
   personSelect(e) {
     var name = e.currentTarget.dataset.name
     this.setData({
-      tihuoWay: name,
+      person: name,
       selectperson: false
     })
   },

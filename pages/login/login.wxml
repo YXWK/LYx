@@ -5,23 +5,27 @@
   </view>
   <view class="sculpture-bg1">
     <view class="sculpture-bg2">
-      <image src="../../static/logo.png"></image> 
+      <image src="../../static/logo.png"></image>
     </view>
   </view>
   <view class="login_box">
-    <view class="username_box">
-      <mp-icon icon="me" color="#fff" size="{{25}}"></mp-icon>
-      <input class="username" name="input"  bindinput="bindname" data-name="username" placeholder="请输入您的账号" placeholder-style="color:#fff"/>
-    </view>
-     <view class="userpass_box">
-      <mp-icon icon="lock" color="#fff" size="{{25}}"></mp-icon>
-      <input class="userpass" name="input"  bindinput="bindpass" data-pass="userpass" placeholder="请输入密码" placeholder-style="color:#fff"/>
-    </view>
-    <checkbox-group bindchange="checkboxChange">
-      <label class="checkbox">
-        <checkbox value="记住密码" class="rm"/>记住密码
-      </label>
-    </checkbox-group>
-    <view class="submit" catchtap="login">登录</view>
+    <form >
+    <!-- bindsubmit="formSubmit" -->
+      <view class="username_box">
+        <mp-icon icon="me" color="#fff" size="{{25}}"></mp-icon>
+        <input class="username" name="no" bindinput="noinput" value='{{no}}' placeholder="请输入您的账号" placeholder-style="color:#fff" />
+      </view>
+      <view class="userpass_box">
+        <mp-icon icon="lock" color="#fff" size="{{25}}"></mp-icon>
+        <input class="userpass" type="password" name="pwd" bindinput="pwdinput" value='{{pwd}}' placeholder="请输入密码" placeholder-style="color:#fff" />
+      </view>
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox">
+          <checkbox value="记住密码" class="rm" />记住密码
+        </label>
+      </checkbox-group>
+      <view class="submit" catchtap="formSubmit">登录</view>
+      <!-- <button class="submit" form-type='submit' disabled='{{disabled}}'>登录</button> -->
+    </form>
   </view>
 </view>

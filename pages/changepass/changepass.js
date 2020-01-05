@@ -5,14 +5,97 @@ Page({
    * 页面的初始数据
    */
   data: {
+    disabled: false,
+    oldpass:"",
+    newpass:"",
+    newpass2:"",
+    oldinput:false,
+    newinput:false,
+    newinput2:false
+  },
+  oldinput: function (e) {
+    this.setData({ oldpass: e.detail.value });
+    this.setData({ oldinput: true });
+    if (this.data.oldinput == true && this.data.newinput == true && this.data.newinput2 == true) {
+      this.setData({ disabled: false });
+    }
 
   },
-
+  newinput: function (e) {
+    this.setData({ newpass: e.detail.value });
+    this.setData({ newinput: true });
+    if (this.data.oldinput == true && this.data.newinput == true && this.data.newinput2 == true) {
+      this.setData({ disabled: false });
+    }
+  },
+  newinput2: function (e) {
+    this.setData({ newpass2: e.detail.value });
+    this.setData({ newinput2: true });
+    if (this.data.oldinput == true && this.data.newinput == true && this.data.newinput2 == true) {
+      this.setData({ disabled: false });
+    }
+  },
+  formSubmit: function (e) {
+    // wx.showLoading({
+    //   title: '登录中...',
+    // })
+    // console.log(e);
+    console.log(this.data.oldpass);
+    console.log(this.data.newpass);
+    console.log(this.data.newpass2);
+    this.setData({ disabled: true });
+    // wx.request({
+    //   url: app.globalData.url.login, //仅为示例，并非真实的接口地址
+    //   data: {
+    //     no: e.detail.value.no,
+    //     pwd: e.detail.value.pwd
+    //   },
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function (res) {
+    //     console.log(res);
+    //     if (res.statusCode == 200) {
+    //       if (res.data.error == true) {
+    //         wx.showToast({
+    //           title: res.data.msg,
+    //           icon: 'none',
+    //           duration: 2000
+    //         })
+    //       } else {
+    //         wx.setStorageSync('student', res.data.data);
+    //         wx.showToast({
+    //           title: res.data.msg,
+    //           icon: 'success',
+    //           duration: 2000
+    //         })
+    //         setTimeout(function () {
+    //           wx.switchTab({
+    //             url: '../teacher/teacher',
+    //           })
+    //         }, 2000)
+    //       }
+    //     } else {
+    //       wx.showToast({
+    //         title: '服务器出现错误',
+    //         icon: 'none',
+    //         duration: 2000
+    //       })
+    //     }
+    //   }
+    // })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({ disabled: false });
+    // var student = wx.getStorageSync('student');
+    // if (typeof (student) == 'object' && student.no != '' && student.classid != '') {
+    //   wx.switchTab({
+    //     url: '../teacher/teacher',
+    //   })
+    // }
   },
 
   /**

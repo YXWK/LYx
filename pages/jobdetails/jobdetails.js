@@ -17,42 +17,110 @@ Page({
         img:""
       }
     ],
+    // 作业图
     workimg:[
       {
         imgid:1,
-        img:"plant.png"
+        img:"plant.png",
+        del: true,
+        max: true,
+        issecected:true
       },
       {
         imgid: 2,
-        img: "plant.png"
+        img: "plant.png",
+        del: true,
+        max: true,
+        issecected:true
       },
       {
         imgid: 3,
-        img: "plant.png"
+        img: "plant.png",
+        del: true,
+        max: true,
+        issecected:true
       },
       {
         imgid: 4,
-        img: "plant.png"
+        img: "plant.png",
+        del: true,
+        max: true,
+        issecected:true
       },
       {
         imgid: 5,
-        img: "plant.png"
+        img: "plant.png",
+        del: true,
+        max: true,
+        issecected:true
       }
     ],
     newimgid:5,
     tempFilePaths:"",
-    del:true,
-    max:true
+    // del:true,
+    // max:true,
+    issecected:true,
+    ismagnify:true,
+    nowimg:0,
+    addimg:true,
+    currimgid:-1
   },
-  showicon:function(){
-    var _this = this;
+  // icon显示
+  showicon:function(e){
+    let $data = e.currentTarget.dataset;
+    // console.log($data.bean);
+    // console.log($data.bean.imgid);
+    let _this = this;
     _this.setData({
-      del: !_this.data.del,
-      max: !_this.data.max
+      currimgid: $data.bean.imgid
+    })
+    // console.log(_this.data.currimgid);
+    // console.log(_this.data.workimg);
+    for (let i in _this.data.workimg){
+      if (_this.data.currimgid == _this.data.workimg[i].imgid){
+        // console.log(_this.data.workimg[i].del);
+        // console.log(_this.data.workimg[i].max);
+        _this.data.workimg[i].del = !_this.data.workimg[i].del;
+        _this.data.workimg[i].max = !_this.data.workimg[i].max;
+      }
+    }
+  },
+  //图片放大
+  magnify:function(e){
+    let $data = e.currentTarget.dataset;
+    let _this = this;
+    _this.setData({
+      ismagnify: !_this.data.ismagnify
     })
   },
+  // 是否选中图片
+  showselect:function(e){
+    let _this = this;
+    let $data = e.currentTarget.dataset;
+    // console.log($data.bean);
+    // console.log($data.bean.imgid);
+    _this.setData({
+      nowimg: $data.bean.imgid
+    })
+    // console.log(_this.data.nowimg);
+    console.log(_this.data.workimg);
+    for (let i in _this.data.workimg) {
+      // console.log(_this.data.workimg[i]);
+      if (_this.data.nowimg == _this.data.workimg[i].imgid) {
+        // console.log(_this.data.nowimg);
+        _this.data.workimg[i].issecected = !_this.data.workimg[i].issecected;
+        console.log(_this.data.workimg[i].issecected);
+      }
+    }
+    console.log(_this.data.workimg);
+    
+    // _this.setData({
+    //   issecected: !_this.data.issecected
+    // })
+  },
+  // 调用手机相册
   chooseimage: function () {
-    var _this = this;
+    let _this = this;
     wx.chooseImage({
       count: 1, // 默认9
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
@@ -60,18 +128,20 @@ Page({
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         _this.setData({
-          tempFilePaths: res.tempFilePaths
+          tempFilePaths: res.tempFilePaths,
+          addimg:false
         })
-        _this.setData({
-          newimgid: newimgid++
-        })
-        var imgjson = {
-          imgid: newimgid, 
-          img: tempFilePaths
-        } 
-        _this.setData({
-          workimg: workimg.push(imgjson)
-        })
+        // ？？？
+        // _this.setData({
+        //   newimgid: newimgid++
+        // })
+        // var imgjson = {
+        //   imgid: newimgid, 
+        //   img: tempFilePaths
+        // } 
+        // _this.setData({
+        //   workimg: workimg.push(imgjson)
+        // })
       }
     })
   },

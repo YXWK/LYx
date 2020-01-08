@@ -1,11 +1,9 @@
 <!--pages/login/login.wxml-->
 <view class="login">
-  <view class="weather">
-    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-  </view>
+  <view class="bg"></view>
   <view class="sculpture-bg1">
     <view class="sculpture-bg2">
-      <image src="../../static/logo.png"></image>
+      <image src="{{msgurl}}logo.png"></image>
     </view>
   </view>
   <view class="login_box">

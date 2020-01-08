@@ -1,8 +1,6 @@
 <!--pages/workbench/workbench.wxml-->
 <view class="workbench">
-  <view>
-    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-	</view>
+  <view class="bg"></view>
    <view class='ceshi_swiper'>
     <swiper class='read_swiper' indicator-dots='{{indicatorDots}}' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}">
         <swiper-item wx:for="{{swiper}}" wx:key="index" wx:for-item="i" circular="trues">
@@ -13,11 +11,13 @@
             <text>{{i.serial}}</text>
             <text>{{i.base}}</text>
             <view class="bench_box" wx:for="{{i.worktype}}" wx:key="j" wx:for-item="j" wx:for-index="btnindex">
+            <!-- 按钮 -->
               <view class="{{btnindex==0?'onebtn':[btnindex==1?'twobtn':[btnindex==2?'threebtn':[btnindex==3?'fourbtn':[btnindex==4?'fivebtn':[btnindex==5?'eightbtn':[btnindex==6?'ninebtn':'tenbtn']]]]]]}}">{{j}}</view>
             </view>
             <view class="sevenbtn">完成</view>
             <view class="sixbtn">赋码</view>
             <view class="line_box" wx:for="{{i.worktype}}" wx:key="j" wx:for-item="j" wx:for-index="btnindex">
+            <!-- 线 -->
               <view class="{{btnindex==0?'one':[btnindex==1?'two':[btnindex==2?'three':[btnindex==3?'four':[btnindex==4?'five':[btnindex==5?'eight':[btnindex==6?'nine':'ten']]]]]]}}"></view>
             </view>
           </view>
@@ -26,10 +26,12 @@
         </swiper-item>
     </swiper>
   </view>
+  <!-- 上一个 -->
   <view class='ceshi_next'  bindtap='nextImg'>
       <mp-icon icon="arrow" color="#343434" size="{{20}}" color="#fff"></mp-icon>
       <!-- <text color="#343434" size="{{20}}" color="#fff">\> </text> -->
     </view>
+    <!-- 下一个 -->
     <view class='ceshi_prew'bindtap='prevImg'>
       <mp-icon icon="back" color="#343434" size="{{15}}" color="#fff"></mp-icon>
        <!-- <text color="#343434" size="{{20}}" color="#fff">\< </text> -->

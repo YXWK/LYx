@@ -38,7 +38,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-
+  // 上一个
   prevImg: function () {
     var swiper = this.data.swiper;
     console.log(swiper.length)
@@ -51,7 +51,7 @@ Page({
       swiper: swiper,
     })
   },
-
+  // 下一个
   nextImg: function () {
     // console.log(2);
     var swiper = this.data.swiper;

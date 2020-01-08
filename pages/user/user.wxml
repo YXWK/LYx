@@ -1,13 +1,11 @@
 <!--pages/user/user.wxml-->
 <view class="content">
   <view class="contraltopimg">
-    <view class="weather">
-      <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-    </view>
+    <view class="weather"></view>
     <view class="account">略阳县电子商务信息管理平台</view>
     <view class="sculpture-bg1">
       <view class="sculpture-bg2">
-        <image src="../../static/sculpture.jpg"></image> 
+        <image src="{{msgurl}}sculpture.jpg"></image> 
         </view>
     </view>
     <navigator url="../login/login" class="edit">

@@ -1,4 +1,7 @@
-.bg{
+.weather{
   width: 100%;
   height: 260rpx;
+  background: url("http://fengyuniot.zicp.vip:33402/UploadFile/app/top-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }

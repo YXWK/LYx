@@ -5,11 +5,11 @@
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
-  padding: 10rpx 0;
+  padding: 20rpx 0;
 }
 .contral-box{
   width: 40%;
-  height: 160rpx;
+  height: 200rpx;
   text-align: center;
   border: 1rpx solid #D2D8E6;
   padding: 20rpx;
@@ -39,5 +39,5 @@
   width: 25%;
   height: 40%;
   display: block;
-  margin:20rpx auto;
+  margin:30rpx auto 20rpx;
 }

@@ -1,7 +1,11 @@
 /* pages/login/login.wxss */
 .bg{
-  height: 100vh;
+ height: 100vh;
   width: 100vw;
+  display: block;
+  background: url("http://fengyuniot.zicp.vip:33402/UploadFile/app/login-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 .sculpture-bg1{
   position: absolute;

@@ -3,33 +3,24 @@
 .container {
   background: #f5f5f5;
 }
-
 image {
   width: 100%;
 }
-
 .weather {
-  background-size: 100%;
   width: 100%;
   /* min-height: 160upx; *//* padding: 20upx 10% 120upx 10%; */
   margin: 0 auto;
   position: relative;
-  height: 400rpx;
-  background: #fff;
-}
-
-.bg {
   height: 300rpx;
+  background: url("http://fengyuniot.zicp.vip:33402/UploadFile/app/top-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
-
 .information {
   display: block;
   width: 80%;
-  /* height: 400rpx; */
+  margin: 10rpx auto 0;
   overflow: hidden;
-  position: absolute;
-  top: 20rpx;
-  left: 70rpx;
   color: #fff;
 }
 
@@ -72,9 +63,12 @@ image {
   border-radius: 20rpx;
   box-shadow: rgba(0, 0, 0, 0.1) 15rpx 10rpx 15rpx;
   position: relative;
-  top: -150rpx;
+  top: -40rpx;
   left: 70rpx;
   text-align: center;
+  background: url("http://fengyuniot.zicp.vip:33402/UploadFile/app/datavideobg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .ifmcon {
@@ -118,6 +112,7 @@ image {
 
 .main {
   width: 100%;
+  margin-top: 100rpx;
 }
 
 .wd {
@@ -138,7 +133,7 @@ image {
   overflow-y: hidden;
 }
 
-.marquee_box {
+.marquee_box{
   /* width: 240rpx; */
   height: 65rpx;
   border: 1rpx solid #96d1d9;
@@ -150,7 +145,18 @@ image {
   white-space: nowrap;
   font-size: 30rpx;
 }
-
+.marquee_boxactive {
+  height: 65rpx;
+  border: 1rpx solid #96d1d9;
+  border-radius: 30rpx;
+  line-height: 65rpx;
+  margin: 0 10rpx;
+  padding: 0 15rpx;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 30rpx;
+  background: #D3EFF2;
+}
 .alarm image {
   width: 30rpx;
   height: 30rpx;
@@ -200,13 +206,14 @@ image {
 .myvideo {
   background: #fff;
   /* display: none; */
+  margin-top: 100rpx;
 }
 
 #myVideo {
   width: 100%;
-  /* height: 245rpx; */
+  height: 490rpx;
   display: block;
-  margin-bottom: 20rpx;
+  /* margin-bottom: 20rpx; */
 }
 
 .screen {
@@ -234,19 +241,35 @@ image {
   height: 48rpx;
   background: #2a3471;
 }
-
+.of1{
+  float: left;
+  background: #2a3471;
+  width: 48rpx;
+  height: 48rpx;
+  margin: 10rpx;
+  opacity: 0.8;
+  padding: 0;
+}
+.of4{
+  float: left;
+  width: 55rpx;
+  height: 55rpx;
+  margin: 10rpx;
+  padding: 0;
+  opacity: 0.8;
+}
 .four_box {
   width: 21rpx;
   height: 21rpx;
   float: left;
-  background: #2a3471;
-  opacity: 0.8;
   margin: 2rpx;
+  background: #2a3471;
 }
 
 .choosebase {
   clear: both;
   width: 95%;
+  overflow: hidden;
   margin: 0 auto;
 }
 
@@ -255,6 +278,28 @@ image {
   height: 60rpx;
   width: 45%;
   text-align: center;
+  margin: 0 10rpx;
+  padding: 0 15rpx;
+  white-space: nowrap;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+
+.baseboxactive{
+  float: left;
+  height: 60rpx;
+  width: 45%;
+  text-align: center;
+  margin: 0 10rpx;
+  padding: 0 15rpx;
+  white-space: nowrap;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #96d1d9;
+  border-radius: 30rpx;
+  background: #EEF9FF;
 }
 
 .fourvideo {
@@ -269,7 +314,7 @@ image {
 
 .echarts {
   width: 100%;
-  height: 520rpx;
+  height: 620rpx;
   background: #fff;
 }
 
@@ -283,4 +328,10 @@ ec-canvas {
   width: 100%;
   height: 100%;
 }
+
+
+
+
+
+
 

@@ -1,42 +1,65 @@
 <!--pages/jobdetails/jobdetails.wxml-->
 <view class="jobdetails">
-   <view>
-    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-	</view>
+  <view class="weather"></view>
   <view class="ftl_contral">
     <view class="ftlcon_title">
       <view class="title_name">农事作业</view>
       <view class="addimg" catchtap="addshow">添加作业图</view>
     </view>
     <view class="ftlcon_box" wx:for="{{jobdtl}}" wx:key="item">
-      <view class="ftlcon_con">种植批次：<text>{{item.batch}}</text></view>
-      <view class="ftlcon_con">所属基地：<text>{{item.base}}</text></view>
-      <view class="ftlcon_con">种植面积：<text>{{item.area}}</text></view>
-      <view class="ftlcon_con">种植品种：<text>{{item.varieties}}</text></view>
-      <view class="ftlcon_con">作业类型：<text>{{item.type}}</text></view>
-      <view class="ftlcon_con">作业时间：<text>{{item.time}}</text></view>
-      <view class="ftlcon_con">操作人：<text>{{item.person}}</text></view>
+      <view class="ftlcon_con">种植批次：
+        <text>{{item.batch}}</text>
+      </view>
+      <view class="ftlcon_con">所属基地：
+        <text>{{item.base}}</text>
+      </view>
+      <view class="ftlcon_con">种植面积：
+        <text>{{item.area}}</text>
+      </view>
+      <view class="ftlcon_con">种植品种：
+        <text>{{item.varieties}}</text>
+      </view>
+      <view class="ftlcon_con">作业类型：
+        <text>{{item.type}}</text>
+      </view>
+      <view class="ftlcon_con">作业时间：
+        <text>{{item.time}}</text>
+      </view>
+      <view class="ftlcon_con">操作人：
+        <text>{{item.person}}</text>
+      </view>
       <view class="imgtitle">作业图</view>
       <image src="../../static/plant.png"></image>
+      <image src="{{tempFilePaths}}" mode="aspecFill" />
     </view>
   </view>
+  <!-- 添加作业图 -->
   <view class="addimg_box" wx:if="{{showModal}}">
     <text class="addtitle">作业图</text>
     <view class='close_mask' bindtap="close_mask">X</view>
     <view class="workimg">
-      <view class="workimgbox" wx:for="{{workimg}}" wx:key="imgid">
-        <image src="../../static/{{item.img}}" catchlongtap="showicon"></image>
-        <view  hidden="{{max}}">
-           <mp-icon class="max-window" icon="max-window" color="#fff" size="{{15}}"></mp-icon>
+      <view class="workimgbox" wx:for="{{workimg}}"  wx:key="imgid">
+      <!-- wx:for-item="info" -->
+        <image class="wkimg" src="../../static/{{item.img}}" catchlongtap="showicon" catchtap="showselect" data-bean="{{item}}"></image>
+        <!-- class="{{nowimg==item.imgid?'mfwkimg':'wkimg'}}" 放大class-->
+        <view class="selected" hidden="{{item.issecected}}">
+          <view class="sel_bg"></view>
+          <mp-icon class="sel_con" icon="done" color="#fff" size="{{12}}"></mp-icon>
+          <!-- <view class="sel_con">√</view> -->
         </view>
-        <view hidden="{{del}}">
-           <mp-icon class="delete" icon="delete" color="#fff" size="{{15}}" ></mp-icon>
+        <view hidden="{{item.max}}">
+          <mp-icon class="max-window" icon="max-window" color="#fff" size="{{15}}" catchtap="magnify"></mp-icon>
         </view>
+        <view hidden="{{item.del}}">
+          <mp-icon class="delete" icon="delete" color="#fff" size="{{15}}"></mp-icon>
+        </view>
+      </view>
+      <view class="workimgbox_add"  hidden="{{addimg}}">
+        <image class="wkimg_add" src="{{tempFilePaths}}"/>
       </view>
       <view class="add" bindtap="chooseimage">
         <mp-icon icon="add" color="#9298a4" size="{{40}}"></mp-icon>
       </view>
-      <!-- <image src="{{tempFilePaths }}" mode="aspecFill" /> -->
     </view>
   </view>
   <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>

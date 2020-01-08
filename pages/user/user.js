@@ -1,18 +1,22 @@
 // pages/user/user.js
+var product = require("../../components/public/public.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    msgurl: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(this.data.msgurl)
+    this.setData({
+      msgurl: product.data.msgurl
+    })
   },
 
   /**

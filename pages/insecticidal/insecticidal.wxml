@@ -1,8 +1,6 @@
 <!--pages/insecticidal/insecticidal.wxml-->
 <view class="insecticidal">
-  <view>
-		<image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-	</view>
+  <view class="weather"></view>
   <view class="led_contral">
     <view class="ledcon_title">杀虫灯设置</view>
     <view class="ledcon_box">

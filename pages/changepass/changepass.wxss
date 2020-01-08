@@ -1,4 +1,5 @@
 /* pages/changepass/changepass.wxss */
+@import "../../components/public/public.wxss";
 .content{
   width: 100%;
 }
@@ -10,7 +11,7 @@
   color: #fff;
   background: #fff;
 }
-.bg{
+.weather{
   width: 100%;
   height: 300rpx;
 }

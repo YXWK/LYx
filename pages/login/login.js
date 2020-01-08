@@ -1,12 +1,12 @@
 // pages/login/login.js
+var product = require("../../components/public/public.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    username: "",
-    userpass: "",
+    msgurl: '',
     disabled: false,
     no: '',
     pwd: '',
@@ -14,35 +14,65 @@ Page({
     pwdinput: false,
 
   },
-  checkboxChange: function (e) {
+  // 记住密码
+  checkboxChange: function(e) {
     console.log('checkbox发生change事件，携带value值为：', e.detail.value)
   },
   // login:function(){
   //   var _this = this;
   // },
-  noinput: function (e) {
-    this.setData({ no: e.detail.value });
-    this.setData({ noinput: true });
+  // 用户名
+  noinput: function(e) {
+    this.setData({
+      no: e.detail.value
+    });
+    this.setData({
+      noinput: true
+    });
     if (this.data.noinput == true && this.data.pwdinput == true) {
-      this.setData({ disabled: false });
+      this.setData({
+        disabled: false
+      });
     }
 
   },
-  pwdinput: function (e) {
-    this.setData({ pwd: e.detail.value });
-    this.setData({ pwdinput: true });
+  // 密码
+  pwdinput: function(e) {
+    this.setData({
+      pwd: e.detail.value
+    });
+    this.setData({
+      pwdinput: true
+    });
     if (this.data.noinput == true && this.data.pwdinput == true) {
-      this.setData({ disabled: false });
+      this.setData({
+        disabled: false
+      });
     }
   },
-  formSubmit: function (e) {
+  // login
+  formSubmit: function(e) {
     // wx.showLoading({
     //   title: '登录中...',
     // })
     // console.log(e);
     console.log(this.data.no);
     console.log(this.data.pwd);
-    this.setData({ disabled: true });
+    this.setData({
+      disabled: true
+    });
+    if (this.data.no != '' && this.data.pwd!=''){
+      wx.switchTab({
+        url: '../index/index',
+      })
+    }else{
+      wx.showToast({
+        title: '账号和密码不能为空',
+        icon:'none',
+        duration: 2000
+      })
+    }
+    
     // wx.request({
     //   url: app.globalData.url.login, //仅为示例，并非真实的接口地址
     //   data: {
@@ -87,8 +117,16 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    this.setData({ disabled: false });
+  onLoad: function(options) {
+
+    console.log(this.data.msgurl)
+    this.setData({
+      msgurl: product.data.msgurl
+    })
+
+    this.setData({
+      disabled: false
+    });
     // var student = wx.getStorageSync('student');
     // if (typeof (student) == 'object' && student.no != '' && student.classid != '') {
     //   wx.switchTab({
@@ -100,18 +138,22 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     if (this.data.no == '' || this.data.pwd == '') {
-      this.setData({ disabled: true });
+      this.setData({
+        disabled: true
+      });
     } else {
-      this.setData({ disabled: false });
+      this.setData({
+        disabled: false
+      });
     }
   }
 })

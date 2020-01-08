@@ -1,10 +1,12 @@
 // pages/changepass/changepass.js
+var product = require("../../components/public/public.js");
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    msgurl: '',
     disabled: false,
     oldpass:"",
     newpass:"",
@@ -13,6 +15,7 @@ Page({
     newinput:false,
     newinput2:false
   },
+  // 旧密码
   oldinput: function (e) {
     this.setData({ oldpass: e.detail.value });
     this.setData({ oldinput: true });
@@ -21,6 +24,7 @@ Page({
     }
 
   },
+  // 新密码
   newinput: function (e) {
     this.setData({ newpass: e.detail.value });
     this.setData({ newinput: true });
@@ -28,6 +32,7 @@ Page({
       this.setData({ disabled: false });
     }
   },
+  // 再次新密码
   newinput2: function (e) {
     this.setData({ newpass2: e.detail.value });
     this.setData({ newinput2: true });
@@ -35,6 +40,7 @@ Page({
       this.setData({ disabled: false });
     }
   },
+  // changepass
   formSubmit: function (e) {
     // wx.showLoading({
     //   title: '登录中...',
@@ -44,6 +50,22 @@ Page({
     console.log(this.data.newpass);
     console.log(this.data.newpass2);
     this.setData({ disabled: true });
+    if (this.data.oldinput != '' && this.data.newinput != '' && this.data.newinput2 != '') {
+      wx.showToast({
+        title: '修改成功',
+        icon: 'success',
+        duration: 2000,
+      })
+      wx.switchTab({
+        url: '../login/login',
+      })
+    } else {
+      wx.showToast({
+        title: '请填写完整',
+        icon: 'none',
+        duration: 2000
+      })
+    }
     // wx.request({
     //   url: app.globalData.url.login, //仅为示例，并非真实的接口地址
     //   data: {
@@ -89,13 +111,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({ disabled: false });
-    // var student = wx.getStorageSync('student');
-    // if (typeof (student) == 'object' && student.no != '' && student.classid != '') {
-    //   wx.switchTab({
-    //     url: '../teacher/teacher',
-    //   })
-    // }
+    console.log(this.data.msgurl)
+    this.setData({
+      msgurl: product.data.msgurl
+    })
   },
 
   /**

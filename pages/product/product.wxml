@@ -1,8 +1,6 @@
 <!--pages/product/product.wxml-->
 <view class="product">
-  <view class="weather">
-    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-  </view>
+  <view class="weather"></view>
   <view class="product-gl">
     <view class="base-mgt">基地管理</view>
     <navigator url="../workbench/workbench" class="product-box">

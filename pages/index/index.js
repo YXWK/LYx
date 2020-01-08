@@ -1,18 +1,22 @@
 //index.js
 //获取应用实例
 import * as echarts from '../../ec-canvas/echarts';
-
+var product = require("../../components/public/public.js");
 var Chart = null;
 
 const app = getApp()
 let chartLine;
 Page({
   data: {
+    msgurl: '',
     environment: false,
     video: true,
     onevideoshow: false,
     fourvideoshow: true,
-    list: ["圪台乡长石头村", "圪台乡党安新村", "圪台乡王家峁村", "圪台乡王家峁村"],
+    selectd:0,
+    selectdbase:0,
+    baseitem:'圪台乡长石头村',
+    list: ["圪台乡长石头村", "圪台乡党安新村", "圪台乡王家峁村", "圪台乡王家峁村1"],
     marqueeList: [{
         name: "圪台乡长石头村    土壤湿度    30%     偏低"
       },
@@ -26,7 +30,10 @@ Page({
         name: "圪台乡王家峁村"
       }
     ],
-    base: ["三岔镇长石头村", "三岔镇长石头村", "三岔镇长石头村", "三岔镇长石头村", "三岔镇长石头村", "三岔镇长石头村"],
+    basebox:'三岔镇长石头村1',
+    base: ["三岔镇长石头村1", "三岔镇长石头村2", "三岔镇长石头村3", "三岔镇长石头村4", "三岔镇长石头村5", "三岔镇长石头村6"],
+    isone:true,
+    isfour:false,
     ec: {
       onInit: function (canvas, width, height) {
         chart = echarts.init(canvas, null, {
@@ -39,8 +46,31 @@ Page({
       lazyLoad: true // 延迟加载
     }
   },
-
+  changeblue:function(e){
+    var classify = e.currentTarget.dataset.classify;
+    var that = this;
+    console.log(classify)  //输出的结果就是你点击的
+    this.setData({
+      baseitem: classify,  //更新
+    })
+    console.log(e);
+  },
+  changebase: function (e) {
+    var baseclass = e.currentTarget.dataset.classify;
+    var that = this;
+    console.log(baseclass)  //输出的结果就是你点击的
+    this.setData({
+      basebox: baseclass,  //更新
+    })
+    console.log(e);
+  },
   onLoad: function (options) {
+    // public imgurl
+    console.log(this.data.msgurl)
+    this.setData({
+      msgurl: product.data.msgurl
+    })
+    // echarts
     this.echartsComponnet = this.selectComponent('#mychart');
     //如果是第一次绘制
     if (!Chart) {
@@ -191,35 +221,37 @@ Page({
 
 
 
-
-
-
-
-
-
-
+  // 视屏监控
   videoshow: function() {
     this.setData({
       environment: true,
       video: false
     })
   },
+  // 环境监测
   environshow: function() {
     this.setData({
       environment: false,
       video: true
     })
   },
+  // 一屏
   catchone: function() {
+    
     this.setData({
       onevideoshow: false,
-      fourvideoshow: true
+      fourvideoshow: true,
+      isone:true,
+      isfour:false
     })
   },
+  // 四屏
   catchfour: function() {
     this.setData({
       onevideoshow: true,
-      fourvideoshow: false
+      fourvideoshow: false,
+      isone: false,
+      isfour: true
     })
   }
 })

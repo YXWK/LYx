@@ -6,10 +6,10 @@ Page({
     logs: []
   },
   onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('contral') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
-    })
+    // this.setData({
+    //   logs: (wx.getStorageSync('contral') || []).map(log => {
+    //     return util.formatTime(new Date(log))
+    //   })
+    // })
   }
 })

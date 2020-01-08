@@ -1,8 +1,6 @@
 <!--pages/fertilizer/fertilizer.wxml-->
 <view class="fertilizer">
-  <view>
-    <image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-	</view>
+ <view class="weather"></view>
   <view class="ftl_contral">
     <view class="ftlcon_title">水肥机控制</view>
     <view class="ftlcon_box">

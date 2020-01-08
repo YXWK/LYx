@@ -1,8 +1,6 @@
 <!-- contral.wxml -->
 <view class="contral">
- <view class="weather">
-		<image class="bg" src="../../static/top-bg.jpg" mode=""></image>
-	</view>
+ <view class="weather"></view>
   <view class="contral-gl">
     <navigator url="../led/led" class="contral-box">
       <image src="../../static/kzsf.png" mode=""></image>
